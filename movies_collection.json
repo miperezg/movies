@@ -1,0 +1,103 @@
+{
+  "info": {
+    "name": "movies",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "bruno",
+      "event": []
+    },
+    {
+      "name": "GET",
+      "event": [],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8082/movies",
+          "host": [
+            "localhost"
+          ],
+          "path": [],
+          "query": [],
+          "variable": []
+        }
+      }
+    },
+    {
+      "name": "POST",
+      "event": [],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8082/movies",
+          "host": [
+            "localhost"
+          ],
+          "path": [],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Interstellar\",\n  \"year\": 2013,\n  \"director\": \"Christopher Nolan\",\n  \"genre\": \"Ciencia ficción, Drama, Aventura\",\n  \"synopsis\": \"En un futuro cercano, la Tierra se enfrenta a una crisis alimentaria. Un grupo de astronautas liderados por el piloto Cooper viaja a través de un agujero de gusano en busca de un nuevo hogar para la humanidad.\"\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "PUT",
+      "event": [],
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8082/movies/1",
+          "host": [
+            "localhost"
+          ],
+          "path": [],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Interstellar\",\n  \"year\": 2014,\n  \"director\": \"Christopher Nolan\",\n  \"genre\": \"Ciencia ficción, Drama, Aventura\",\n  \"synopsis\": \"En un futuro cercano, la Tierra se enfrenta a una crisis alimentaria. Un grupo de astronautas liderados por el piloto Cooper viaja a través de un agujero de gusano en busca de un nuevo hogar para la humanidad.\"\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "DELETE",
+      "event": [],
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8082/movies/1",
+          "host": [
+            "localhost"
+          ],
+          "path": [],
+          "query": [],
+          "variable": []
+        }
+      }
+    }
+  ],
+  "variable": []
+}
