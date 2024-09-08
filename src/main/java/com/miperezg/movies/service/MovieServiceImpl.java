@@ -15,11 +15,34 @@ public class MovieServiceImpl implements MovieService{
     @Autowired
     private MovieRepository movieRepository;
 
+    @Override
     public List<Movie> getAllMovies(){
         return movieRepository.findAll();
     }
 
+    @Override
     public Optional<Movie> getMovieById(Long id){
         return movieRepository.findById(id);
+    }
+
+    @Override
+    public Movie createMovie(Movie movie) {
+        return movieRepository.save(movie);
+    }
+
+    @Override
+    public Movie updateMovie(Movie movie, Long id) {
+        if(movieRepository.existsById(id)){
+            movie.setId(id);
+            return movieRepository.save(movie);
+        }
+        else{
+            return null;
+        }
+    }
+
+    @Override
+    public void deleteMovie(Long id) {
+        movieRepository.deleteById(id);
     }
 }
