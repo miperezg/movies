@@ -1,7 +1,7 @@
 
 package com.miperezg.movies.model;
 
-import java.io.Serializable;
+import org.springframework.hateoas.RepresentationModel;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -18,7 +18,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Entity
 @Table( name = "movie")
-public class Movie implements Serializable{
+public class Movie extends RepresentationModel<Movie>{
     @Id
     @GeneratedValue( strategy = GenerationType.IDENTITY)
     @Column(name = "id")
